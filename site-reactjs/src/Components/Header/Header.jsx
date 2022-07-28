@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import S from './Header.module.css';
-import Botao from '../Botao/Botao';
-const Header = (titulo) => {
+
+const Header = ({titulo}) => {
   return (
-    <header>
+    <header className={S.container}>
         <h4>{titulo}</h4>
+        <nav>
+          
+        </nav>
     </header>
   )
 }
