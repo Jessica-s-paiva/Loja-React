@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Cadastro from './Pages/Cadastro/Cadastro';
 import Header from './Components/Header/Header';
+import DeleteUser from './Pages/DeleteUser/DeleteUser';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -12,7 +13,8 @@ function App() {
       <Header titulo='Loja'/>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/Cadastro' element={<Cadastro />} />
+        <Route path='/cadastro' element={<Cadastro />} />
+        <Route path='/DeleteUser' element={<DeleteUser />} />
       </Routes>
     </BrowserRouter>
   )
