@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Cadastro from './Pages/Cadastro/Cadastro';
 import Header from './Components/Header/Header';
-import DeleteUser from './Pages/DeleteUser/DeleteUser';
+import Produtos from './Pages/Produtos/Produtos';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/cadastro' element={<Cadastro />} />
-        <Route path='/DeleteUser' element={<DeleteUser />} />
+        <Route path='/produtos' element={<Produtos />} />
       </Routes>
     </BrowserRouter>
   )
