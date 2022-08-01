@@ -34,9 +34,10 @@ export const ClientesController = (app, db) => {
 
     app.post("/clientes", async (req, res) => {
         const body = req.body
+        console.log(JSON.stringify(body));
         const novoCliente = new ClientesModel(
             body.CPF, 
-            body.EAMAIL, 
+            body.EMAIL, 
             body.ENDERECO, 
             body.SEXO, 
             body.DATA_NASCIMENTO, 

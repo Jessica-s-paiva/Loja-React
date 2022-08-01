@@ -42,6 +42,7 @@ function criaTabelaProdutos(){
     db.run(PRODUTOS_SCHEMA, (error) =>{
         if (error) console.log("Erro ao cria a tabela produtos.")
     })
+    console.log('creted produtos')
 }
 db.serialize( ()=> {
     criaTabelaProdutos();
@@ -63,11 +64,11 @@ CREATE TABLE IF NOT EXISTS "COMPRAS" (
   );`
 
 const ADD_COMPRAS_DATA = `
-INSERT INTO COMPRAS (ID, DATA_COMPRA, ID_ESTOQUE, ID_CLIENTE)
+INSERT INTO COMPRAS (DATA_COMPRA, ID_ESTOQUE, ID_CLIENTE)
 VALUES 
-    (1, '22/06/2022', '2244', '19'),
-    (2, '15/06/2022', '2356', '54'),
-    (3, '24/06/2022', '2109', '43');`
+    ('22/06/2022', '2244', '19'),
+    ( '15/06/2022', '2356', '54'),
+    ( '24/06/2022', '2109', '43');`
 
 function criaTabelaCompra() {
     db.run(COMPRAS_SCHEMA, (error)=> {
@@ -78,7 +79,10 @@ function criaTabelaCompra() {
 
 function populaTabelaCompra() {
     db.run(ADD_COMPRAS_DATA, (error)=> {
-       if (error) console.log("Erro ao popular tabela de usuários");
+       if (error) {
+        console.log("Erro ao popular tabela de usuários");
+        console.log(error.message)
+    }
     });
 }
 
