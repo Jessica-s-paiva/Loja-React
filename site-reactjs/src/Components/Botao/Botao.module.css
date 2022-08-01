@@ -1,0 +1,19 @@
+.btn {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+    width: 100%;
+}

@@ -1,0 +1,33 @@
+.section1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+    text-align: justify;
+}
+
+.sectionA{
+    width: 50%;
+    padding: 80px 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.sectionB{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionCards{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
