@@ -6,7 +6,9 @@ export class ProdutosDao {
     listarProdutos() {
         return new Promise((resolve, reject) => {
             this.database.all(`SELECT * FROM PRODUTOS`, (error, resultado) => { 
-                if (error) reject("Erro ao inserir o banco")
+                if (error) { reject("Erro ao inserir o banco")
+                console.log(error.message)
+            }
                 else resolve(resultado)
               })
         })

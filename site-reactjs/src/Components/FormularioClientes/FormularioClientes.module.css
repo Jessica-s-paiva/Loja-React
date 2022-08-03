@@ -1,0 +1,10 @@
+.FormularioClientes {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: auto;
+    padding: 1rem;
+}
